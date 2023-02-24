@@ -57,9 +57,6 @@ jobs:
           repository: ${{ fromJson(needs.Authorization.outputs.args).repo }}
           ref: ${{ fromJson(needs.Authorization.outputs.args).ref }}
           lfs: 'true'
-      - name: Setup blackduck properties
-        run: |
-             echo detect.excluded.detector.types=GO_MOD >> application.properties
       - name: Run blossom action
         uses: NVIDIA/blossom-action@main
         env:
