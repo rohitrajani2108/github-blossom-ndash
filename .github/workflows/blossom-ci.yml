@@ -77,7 +77,7 @@ jobs:
         run: blossom-ci
         env:
           OPERATION: 'START-CI-JOB'
-          CI_SERVER: ${{ secrets.CI_SERVER }}
+          CI_SERVER: ${{ secrets.CI_SERVER_JOB }}
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               
   Upload-Log:
@@ -89,5 +89,5 @@ jobs:
         run: blossom-ci
         env:
           OPERATION: 'POST-PROCESSING'
-          CI_SERVER: ${{ secrets.CI_SERVER }}
+          CI_SERVER: ${{ secrets.CI_SERVER_JOB }}
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
